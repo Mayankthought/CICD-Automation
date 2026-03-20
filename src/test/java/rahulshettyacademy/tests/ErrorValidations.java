@@ -23,11 +23,14 @@ import rahulshettyacademy.pageobjects.ProductCatalogue;
 
 public class ErrorValidations extends BaseTest {
 
+
+
+
 	@Test(groups= {"ErrorHandling"},retryAnalyzer=Retry.class)
 	public void loginValidation() throws IOException {
 		
 		String ProductName= "ADIDAS ORIGINAL";
-		
+		//test the push for webhook
 		landingPage.loginApplication("makkrai@gmail.com", "Qwerty234@123");
 		
 		Assert.assertEquals("Incorrect email or password.",landingPage.errorValidation());
